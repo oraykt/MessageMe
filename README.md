@@ -3,22 +3,16 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
 
-* Ruby version
+```bash
+ruby -v 
+ruby 2.5.5p157 
 
-* System dependencies
+rails -v
+Rails 5.2.3
 
-* Configuration
+gem 'semantic-ui-sass'
+```
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![](https://i.imgur.com/iMIn4is.png)
