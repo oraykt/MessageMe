@@ -18,11 +18,22 @@
 //= require semantic-ui
 //= require_tree .
 
-scroll_bottom = function(){
-  if($('#messages').length > 0){
-      $('#messages').scrollTop($('#messages')[0].scrollHeight)
-  }
-};
+
+scroll_bottom =()=>{
+    const messageBox = $('#messages');
+    if(messageBox.length > 0){
+        messageBox.scrollTop(messageBox[0].scrollHeight)
+    }
+}
+
+submit_message=()=>{
+    $('#message_body').on('keydown', function(e){
+        if(e.keyCode === 13) {
+            $('button').click()
+            e.target.value = ''
+        }
+    })
+}
 
 $(document).on('turbolinks:load',function () {
     $('.ui.dropdown').dropdown();
@@ -31,7 +42,8 @@ $(document).on('turbolinks:load',function () {
                 .closest('.message')
                 .transition('fade')
 
-        });
-    scroll_bottom();
-});
+        })
+    submit_message()
+    scroll_bottom()
+})
 
