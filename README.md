@@ -14,6 +14,6 @@ Rails 5.2.3
 gem 'semantic-ui-sass'
 ```
 
-
+![](https://i.imgur.com/pspdd1J.png)
 ![](https://i.imgur.com/qSAa6t3.png)
 ![](https://i.imgur.com/Y33nxwy.png)
