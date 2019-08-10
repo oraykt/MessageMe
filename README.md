@@ -15,4 +15,5 @@ gem 'semantic-ui-sass'
 ```
 
 
-![](https://i.imgur.com/iMIn4is.png)
+![](https://i.imgur.com/qSAa6t3.png)
+![](https://i.imgur.com/Y33nxwy.png)
