@@ -1,7 +1,5 @@
 <%= link_to "Chatroom", root_path, class: "item" %>
-<a class="item">
-  Messages
-</a>
+<%= link_to "My Messages (ComingSoon)", root_path, class: "item" %>
 <div class="right menu">
 
   <% if !logged_in? %>
@@ -9,17 +7,11 @@
       <%= link_to 'Log in', login_path, class: 'ui primary button' %>
     </div>
     <div class="item">
-      <%= link_to 'Sign up', login_path, class: 'ui green button' %>
+      <%= link_to 'Sign up', register_path, class: 'ui green button' %>
     </div>
   <% else %>
-    <div class="ui dropdown item">
-      Account <i class="dropdown icon"></i>
-      <div class="menu">
-        <% if logged_in? %>
-          <%= link_to 'Details', '#', class: 'item'%>
-          <%= link_to 'Log out', logout_path, method: :delete, class: 'item' %>
-        <% end %>
-      </div>
+    <div class="item">
+      <%= link_to 'Log out', logout_path, method: :delete, class: 'ui red button' %>
     </div>
   <% end %>
 </div>

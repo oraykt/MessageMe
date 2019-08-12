@@ -5,6 +5,26 @@ class SessionsController < ApplicationController
 
   end
 
+  def register
+
+  end
+
+  def signup
+    # user = User.new(user_params)
+    # if user.save
+    #   ActionCable.server.broadcast 'chatroom_channel',
+    #                                mod_message: user_render(user)
+    # end
+    user = User.new(user_params)
+    if user.save
+      flash[:success] = 'You have successfully registered'
+      redirect_to root_path
+    else
+      flash.now[:error] = 'There was something wrong with your signup information'
+      render 'register'
+    end
+  end
+
   def create
     user = User.find_by(username: params[:session][:username])
     if user && user.authenticate(params[:session][:password])
