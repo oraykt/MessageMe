@@ -10,15 +10,10 @@ class SessionsController < ApplicationController
   end
 
   def signup
-    # user = User.new(user_params)
-    # if user.save
-    #   ActionCable.server.broadcast 'chatroom_channel',
-    #                                mod_message: user_render(user)
-    # end
     user = User.new(user_params)
     if user.save
       flash[:success] = 'You have successfully registered'
-      redirect_to root_path
+      redirect_to login_path
     else
       flash.now[:error] = 'There was something wrong with your signup information'
       render 'register'
@@ -44,6 +39,10 @@ class SessionsController < ApplicationController
   end
 
   private
+
+  def user_params
+    params.require(:user).permit(:username, :password)
+  end
 
   def logged_in_redirect
     if logged_in?
