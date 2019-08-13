@@ -43,6 +43,7 @@ $(document).on('turbolinks:load',function () {
                 .transition('fade')
 
         })
+    console.log('test')
     submit_message()
     scroll_bottom()
 })
