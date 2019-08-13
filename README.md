@@ -23,7 +23,7 @@ cd MessageMe
 rails db:migrate
 bundle install --without production
 rails s
-```h
+```
 
 ![](https://i.imgur.com/pspdd1J.png)
 ![](https://i.imgur.com/qSAa6t3.png)
